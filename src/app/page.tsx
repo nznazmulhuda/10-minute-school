@@ -1,4 +1,6 @@
+import CheckList from "@/components/home/checkList";
 import CtaButton from "@/components/home/ctaButton";
+import Title from "@/components/home/instructor";
 import Trailer from "@/components/home/trailer";
 
 export default function Home() {
@@ -8,7 +10,7 @@ export default function Home() {
         {/* right side */}
         <aside className="col-span-4">
           {/* title */}
-          <section></section>
+          <Title />
 
           {/* description */}
           <section></section>
@@ -31,7 +33,7 @@ export default function Home() {
 
         {/* left side */}
         <aside className="col-span-2 h-[200vh]">
-          <div className="sticky top-22 z-50 space-y-6">
+          <div className="sticky top-22 space-y-6">
             {/* trailer */}
             <Trailer />
 
@@ -39,7 +41,7 @@ export default function Home() {
             <CtaButton />
 
             {/* check lists */}
-            <section></section>
+            <CheckList />
           </div>
         </aside>
       </section>
