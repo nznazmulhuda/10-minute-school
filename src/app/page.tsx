@@ -1,6 +1,7 @@
 import CheckList from "@/components/home/checkList";
 import CtaButton from "@/components/home/ctaButton";
-import Title from "@/components/home/instructor";
+import Instructor from "@/components/home/instructor";
+import Title from "@/components/home/title";
 import Trailer from "@/components/home/trailer";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-[500vh]">
       <section className="grid grid-cols-6 gap-4">
         {/* right side */}
-        <aside className="col-span-4">
+        <aside className="col-span-4 space-y-6">
           {/* title */}
           <Title />
 
@@ -16,7 +17,7 @@ export default function Home() {
           <section></section>
 
           {/* instructors */}
-          <section></section>
+          <Instructor />
 
           {/* how the course is laid out */}
           <section></section>
