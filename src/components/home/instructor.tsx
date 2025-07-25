@@ -34,8 +34,11 @@ export default function Instructor() {
       <CardContent className="p-8 bg-gradient-to-br from-slate-50 to-white pt">
         <div className="space-y-8">
           <div className="group">
-            {instructorData?.values.map((instructor) => (
-              <div className="flex items-start gap-6 p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100">
+            {instructorData?.values.map((instructor, id) => (
+              <div
+                key={instructor.id || instructor.title || id}
+                className="flex items-start gap-6 p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100"
+              >
                 <div className="relative">
                   <Avatar className="w-20 h-20 ring-4 ring-slate-100 group-hover:ring-slate-200 transition-all duration-300">
                     <AvatarImage
@@ -52,9 +55,21 @@ export default function Instructor() {
                 </div>
                 <div className="flex-1 space-y-3">
                   <div>
-                    <h4 className="text-2xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
-                      {instructor.name}
-                    </h4>
+                    {instructor.has_instructor_page ? (
+                      <a
+                        href={`https://10minuteschool.com/en/skills/instructors/${instructor.slug}`}
+                        target="_blank"
+                      >
+                        <h4 className="text-2xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors hover:text-[#007a0e]">
+                          {instructor.name}
+                        </h4>
+                      </a>
+                    ) : (
+                      <h4 className="text-2xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
+                        {instructor.name}
+                      </h4>
+                    )}
+
                     <Badge
                       variant="secondary"
                       className="mt-2 bg-slate-100 text-slate-700 border-slate-200"
