@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 10 Minute School | Frontend Engineer Assessment
 
-## Getting Started
+A responsive landing page built using **Next.js** and **TypeScript** as part of a Frontend Engineer assessment for **10 Minute School**. The page fetches dynamic content from a public API and renders it in a clean, performant, and accessible interface.
 
-First, run the development server:
+---
+
+## 🧩 Tech Stack
+
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Component:** Shadcn UI
+- **Data Fetching:** Fetch API
+- **Deployment:** Vercel
+
+---
+
+## 📌 Features
+
+- Fully responsive and accessible layout
+- API integration with dynamic data rendering
+- Modular, reusable components
+- Clean folder structure following best practices
+
+---
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+├── src/
+│   ├── app/           # Next.js app router pages and layouts
+│   ├── components/    # Reusable UI components
+│   ├── context/       # React context providers
+│   ├── lib/           # Library utilities and helpers
+│   ├── provider/      # Custom providers
+│   ├── types/         # TypeScript type definitions
+├── public/            # Static assets (images, fonts, etc.)
+└── README.md          # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Setup & Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Clone the repo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`git clone https://github.com/nznazmulhuda/10-minute-school.git`
 
-## Learn More
+### 2. Navigate to the project folder
 
-To learn more about Next.js, take a look at the following resources:
+`cd 10ms-frontend-school`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Install dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`pnpm install`
 
-## Deploy on Vercel
+### 4. Run the development server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`pnpm run dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Live Demo
+
+[View the live site here](https://10-minute-school-frontend.vercel.app/)
