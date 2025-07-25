@@ -1,9 +1,9 @@
 export interface ApiResponse {
   code: number;
   data: Data;
-  error: any[];
+  error: [];
   message: string;
-  payload: any[];
+  payload: [];
   status_code: number;
 }
 
@@ -23,7 +23,7 @@ export interface Data {
   cta_text: CtaText;
   sections: Section[];
   is_cohort_based_course: boolean;
-  secondary_cta_group: any[];
+  secondary_cta_group: [];
   delivery_method: string;
 }
 

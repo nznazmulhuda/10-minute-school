@@ -16,7 +16,9 @@ export default function Trailer() {
       (item) => item.resource_type === "video"
     );
 
-    youtubeData && setTrailerVideo(youtubeData);
+    if (youtubeData) {
+      setTrailerVideo(youtubeData);
+    }
   }, [data]);
 
   return (

@@ -17,7 +17,9 @@ export default function Instructor() {
       (item) => item.type === "instructors"
     );
 
-    filterData && setInstructorData(filterData);
+    if (filterData) {
+      setInstructorData(filterData);
+    }
   }, [data]);
 
   return (
@@ -34,8 +36,11 @@ export default function Instructor() {
       <CardContent className="p-8 bg-gradient-to-br from-slate-50 to-white pt">
         <div className="space-y-8">
           <div className="group">
-            {instructorData?.values.map((instructor) => (
-              <div className="flex items-start gap-6 p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100">
+            {instructorData?.values.map((instructor, idx) => (
+              <div
+                key={instructor.id || idx}
+                className="flex items-start gap-6 p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100"
+              >
                 <div className="relative">
                   <Avatar className="w-20 h-20 ring-4 ring-slate-100 group-hover:ring-slate-200 transition-all duration-300">
                     <AvatarImage
