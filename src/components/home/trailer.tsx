@@ -22,7 +22,7 @@ export default function Trailer() {
   return (
     <section>
       <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white py-0">
-        <CardHeader className="bg-slate-800 text-white py-2">
+        <CardHeader className="bg-slate-800 text-white py-2 pb-0">
           <CardTitle className="flex items-center gap-3">
             <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
               <Star className="w-5 h-5" />
