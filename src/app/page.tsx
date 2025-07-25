@@ -1,9 +1,11 @@
+import Trailer from "@/components/home/trailer";
+
 export default function Home() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <section className="grid grid-cols-6 gap-4">
         {/* right side */}
-        <aside className="col-span-4 border-red-400 border h-screen">
+        <aside className="col-span-4">
           {/* title */}
           <section></section>
 
@@ -27,9 +29,9 @@ export default function Home() {
         </aside>
 
         {/* left side */}
-        <aside className="col-span-2 border-red-400 border h-screen">
+        <aside className="col-span-2">
           {/* trailer */}
-          <section></section>
+          <Trailer />
 
           {/* cta */}
           <section></section>

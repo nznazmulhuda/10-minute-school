@@ -3,7 +3,7 @@
 import { DataContext } from "@/context/data.context";
 import { getCourseData } from "@/lib/api";
 import { Data } from "@/types/course";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useContext, useEffect, useState } from "react";
 
 export default function DataProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<"en" | "bn">("en");
@@ -13,7 +13,7 @@ export default function DataProvider({ children }: { children: ReactNode }) {
     const fetchData = async () => {
       const fetchedData = await getCourseData(language);
 
-      if (fetchedData) setData(data);
+      if (fetchedData) setData(fetchedData);
       else setData(null);
     };
 
@@ -29,3 +29,10 @@ export default function DataProvider({ children }: { children: ReactNode }) {
     <DataContext.Provider value={dataValue}>{children}</DataContext.Provider>
   );
 }
+
+// hook: to use data context's value
+export const useData = () => {
+  const data = useContext(DataContext);
+
+  return data;
+};
