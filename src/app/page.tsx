@@ -1,5 +1,6 @@
 import CheckList from "@/components/home/checkList";
 import CtaButton from "@/components/home/ctaButton";
+import Title from "@/components/home/instructor";
 import Trailer from "@/components/home/trailer";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
         {/* right side */}
         <aside className="col-span-4">
           {/* title */}
-          <section></section>
+          <Title />
 
           {/* description */}
           <section></section>
