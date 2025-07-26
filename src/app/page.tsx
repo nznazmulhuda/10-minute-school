@@ -1,6 +1,7 @@
 import CheckList from "@/components/home/checkList";
 import CourseLeadOut from "@/components/home/courseLaidOut";
 import CtaButton from "@/components/home/ctaButton";
+import GuideLine from "@/components/home/guideLine";
 import Instructor from "@/components/home/instructor";
 import Title from "@/components/home/title";
 import Trailer from "@/components/home/trailer";
@@ -19,6 +20,9 @@ export default function Home() {
 
           {/* how the course is laid out */}
           <CourseLeadOut />
+
+          {/* guideline */}
+          <GuideLine />
 
           {/* what you will learn by doing the course */}
           <section></section>
