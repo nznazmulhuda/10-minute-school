@@ -1,6 +1,7 @@
 import CheckList from "@/components/home/checkList";
 import CourseLeadOut from "@/components/home/courseLaidOut";
 import CtaButton from "@/components/home/ctaButton";
+import ExclusiveFeature from "@/components/home/exclusiveFeature";
 import GuideLine from "@/components/home/guideLine";
 import Instructor from "@/components/home/instructor";
 import Pointer from "@/components/home/pointers";
@@ -29,7 +30,7 @@ export default function Home() {
           <Pointer />
 
           {/* course exclusive feature */}
-          <section></section>
+          <ExclusiveFeature />
 
           {/* course details */}
           <section></section>
