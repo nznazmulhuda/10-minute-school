@@ -27,7 +27,7 @@ export default async function RootLayout({
 
         <meta name="description" content={seo?.seo?.description} />
 
-        {seo?.seo?.defaultMeta?.map((meta: any, index: number) => {
+        {seo?.seo?.defaultMeta?.map((meta, index: number) => {
           const TagProps =
             meta.type === "property"
               ? { property: meta.value, content: meta.content }
@@ -38,7 +38,7 @@ export default async function RootLayout({
 
         <meta name="keywords" content={seo?.seo?.keywords?.join(", ")} />
 
-        {seo?.seo?.schema?.map((item: any, idx: number) =>
+        {seo?.seo?.schema?.map((item, idx: number) =>
           item?.meta_value ? (
             <script
               key={idx}

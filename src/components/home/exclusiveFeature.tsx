@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Award, CheckCircle, Play } from "lucide-react";
-import { Data, Section } from "@/types/course";
+import { Data } from "@/types/course";
+import Image from "next/image";
 
 export default function ExclusiveFeature({ data }: { data: Data }) {
   return (
@@ -27,9 +28,11 @@ export default function ExclusiveFeature({ data }: { data: Data }) {
                 <div className="relative overflow-hidden rounded-xl shadow-lg">
                   <div className="bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center">
                     {feature.file_url ? (
-                      <img
+                      <Image
                         src={feature.file_url || "/placeholder.svg"}
                         alt={feature.title || "Feature"}
+                        width={1000}
+                        height={100}
                         className="w-full h-full group-hover:scale-105 transition-transform duration-500 cursor-pointer"
                       />
                     ) : (

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card } from "../ui/card";
 import { Data } from "@/types/course";
 
@@ -43,9 +44,11 @@ export default function GuideLine({ data }: { data: Data }) {
             </div>
             {engagement.thumbnail && (
               <div className="flex justify-center">
-                <img
+                <Image
                   src={engagement.thumbnail || "/placeholder.svg"}
-                  alt={engagement.title}
+                  alt={engagement?.title || "Guideline image"}
+                  width={1000}
+                  height={500}
                   className="max-w-full h-auto rounded-lg"
                 />
               </div>

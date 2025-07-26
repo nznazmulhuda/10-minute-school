@@ -1,6 +1,7 @@
 import { BookOpen } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Data } from "@/types/course";
+import Image from "next/image";
 
 export default function CourseLeadOut({ data }: { data: Data }) {
   return (
@@ -28,7 +29,12 @@ export default function CourseLeadOut({ data }: { data: Data }) {
                 <div className="flex items-start gap-4">
                   {feature.icon && (
                     <div className="flex-shrink-0 p-3 bg-emerald-100 rounded-xl group-hover:bg-emerald-200 transition-colors">
-                      <img src={feature.icon} alt="" className="w-8 h-8" />
+                      <Image
+                        src={feature.icon}
+                        alt={"feature icon"}
+                        width={32}
+                        height={32}
+                      />
                     </div>
                   )}
                   <div className="flex-1 space-y-3">
