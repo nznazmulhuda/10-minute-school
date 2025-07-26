@@ -11,7 +11,7 @@ A responsive landing page built using **Next.js** and **TypeScript** as part of 
 - **Styling:** Tailwind CSS
 - **Component:** Shadcn UI
 - **Data Fetching:** Fetch API
-- **Deployment:** Vercel
+- **Deployment:** Vercel, Docker
 
 ---
 
@@ -21,6 +21,7 @@ A responsive landing page built using **Next.js** and **TypeScript** as part of 
 - API integration with dynamic data rendering
 - Modular, reusable components
 - Clean folder structure following best practices
+- **Dockerized for containerized deployment and easy production setup**
 
 ---
 
@@ -36,6 +37,8 @@ A responsive landing page built using **Next.js** and **TypeScript** as part of 
 │   ├── provider/      # Custom providers
 │   ├── types/         # TypeScript type definitions
 ├── public/            # Static assets (images, fonts, etc.)
+├── Dockerfile         # Docker container build instructions
+├── docker-compose.yml # Docker compose service definition
 └── README.md          # Project documentation
 ```
 
@@ -56,6 +59,18 @@ A responsive landing page built using **Next.js** and **TypeScript** as part of 
 ### 4. Run the development server
 
 `pnpm run dev`
+
+## 🐳 Running with Docker
+
+You can run the project in a containerized environment using Docker:
+
+### Build the Docker image
+
+`docker-compose build`
+
+### Start the container
+
+`docker-compose up -d`
 
 ## 🌐 Live Demo
 
