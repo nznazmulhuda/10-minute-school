@@ -3,12 +3,10 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { ChevronDown, ChevronUp, FileText } from "lucide-react";
-import { useData } from "@/provider/data.provider";
-import { Section } from "@/types/course";
+import { Data, Section } from "@/types/course";
 
-export default function About() {
+export default function About({ data }: { data: Data }) {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set([0]));
-  const { data } = useData();
   const [section, setSection] = useState<Section>();
 
   useEffect(() => {
@@ -49,7 +47,7 @@ export default function About() {
               className="border-b border-gray-100 last:border-b-0"
             >
               <button
-                className="w-full text-left p-6 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 flex items-center justify-between group  cursor-pointer"
+                className="w-full text-left p-6 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 flex items-center justify-between group cursor-pointer"
                 onClick={() => toggleItem(index)}
               >
                 <div className="flex-1">

@@ -19,7 +19,7 @@ export interface Data {
   start_at: string;
   media: Medium[];
   checklist: Checklist[];
-  seo: [];
+  seo: HeadSeoProps;
   cta_text: CtaText;
   sections: Section[];
   is_cohort_based_course: boolean;
@@ -115,4 +115,24 @@ export interface SectionValue {
 
   question?: string;
   answer?: string;
+}
+
+export interface DefaultMeta {
+  content: string;
+  type: "property" | "name";
+  value: string;
+}
+
+export interface SchemaMeta {
+  meta_name: string;
+  meta_value: string;
+  type: string;
+}
+
+export interface HeadSeoProps {
+  title: string;
+  description: string;
+  keywords: string[];
+  defaultMeta: DefaultMeta[];
+  schema: SchemaMeta[];
 }

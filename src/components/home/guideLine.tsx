@@ -1,11 +1,7 @@
-"use client";
-
-import { useData } from "@/provider/data.provider";
 import { Card } from "../ui/card";
+import { Data } from "@/types/course";
 
-export default function GuideLine() {
-  const { data } = useData();
-
+export default function GuideLine({ data }: { data: Data }) {
   return data?.sections
     .find((item) => item.type === "group_join_engagement")
     ?.values?.map((engagement, idx) => (
@@ -35,13 +31,14 @@ export default function GuideLine() {
               >
                 {engagement.description}
               </p>
-              <button
-                className="bg-white text-gray-900 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors cursor-pointer"
-                onClick={() =>
-                  window.open(engagement.cta?.clicked_url, "_blank")
-                }
-              >
-                {engagement.cta?.text || "Download"}
+              <button className="bg-white text-gray-900 px-6 py-2 rounded-lg font-medium hover:bg-gray-100 transition-colors cursor-pointer">
+                <a
+                  href={engagement.cta?.clicked_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {engagement.cta?.text || "Download"}
+                </a>
               </button>
             </div>
             {engagement.thumbnail && (

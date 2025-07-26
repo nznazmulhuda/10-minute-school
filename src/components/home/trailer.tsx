@@ -1,25 +1,12 @@
-"use client";
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import { YouTubePlayer } from "../shared/youtubePlayer";
-import { useEffect, useState } from "react";
-import { Medium } from "@/types/course";
-import { useData } from "@/provider/data.provider";
+import { Data } from "@/types/course";
 
-export default function Trailer() {
-  const [trailerVideo, setTrailerVideo] = useState<Medium>();
-  const { data } = useData();
-
-  useEffect(() => {
-    const youtubeData = data?.media.find(
-      (item) => item.resource_type === "video"
-    );
-
-    if (youtubeData) {
-      setTrailerVideo(youtubeData);
-    }
-  }, [data]);
+export default function Trailer({ data }: { data: Data }) {
+  const trailerVideo = data?.media.find(
+    (item) => item.resource_type === "video"
+  );
 
   return (
     <section>

@@ -1,13 +1,9 @@
-"use client";
-
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { useData } from "@/provider/data.provider";
+import { Data } from "@/types/course";
 import { BanknoteArrowDown } from "lucide-react";
 import Image from "next/image";
 
-export default function CheckList() {
-  const { data } = useData();
-
+export default function CheckList({ data }: { data: Data }) {
   return (
     <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white py-0">
       <CardHeader className="bg-[#1d293d] py-2 pb-0">

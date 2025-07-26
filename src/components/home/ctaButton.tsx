@@ -1,13 +1,9 @@
-"use client";
-
 import { Award, Clock, BanknoteArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { useData } from "@/provider/data.provider";
+import { Data } from "@/types/course";
 
-export default function CtaButton() {
-  const { data } = useData();
-
+export default function CtaButton({ data }: { data: Data }) {
   return (
     <Card className="overflow-hidden shadow-lg border border-emerald-200 bg-white py-0">
       <CardHeader className="bg-[#007a55] text-white py-2 pb-0">
