@@ -1,4 +1,5 @@
 import CheckList from "@/components/home/checkList";
+import CourseLeadOut from "@/components/home/courseLaidOut";
 import CtaButton from "@/components/home/ctaButton";
 import Instructor from "@/components/home/instructor";
 import Title from "@/components/home/title";
@@ -17,7 +18,7 @@ export default function Home() {
           <Instructor />
 
           {/* how the course is laid out */}
-          <section></section>
+          <CourseLeadOut />
 
           {/* what you will learn by doing the course */}
           <section></section>
