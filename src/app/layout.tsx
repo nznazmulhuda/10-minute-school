@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/header";
+import { getCourseData } from "@/lib/api";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,19 +13,42 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Best IELTS Preparation Course by Munzereen Shahid [2025]",
-  description:
-    "Take Best IELTS preparation with us, This Course is one of the Best IELTS Course in Bangladesh, which includes mock tests, and a premium study book.",
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const seo = await getCourseData("en");
+
   return (
     <html lang="en">
+      <head>
+        <title>{seo?.seo?.title || "Default Title"}</title>
+
+        <meta name="description" content={seo?.seo?.description} />
+
+        {seo?.seo?.defaultMeta?.map((meta: any, index: number) => {
+          const TagProps =
+            meta.type === "property"
+              ? { property: meta.value, content: meta.content }
+              : { name: meta.value, content: meta.content };
+
+          return <meta key={index} {...TagProps} />;
+        })}
+
+        <meta name="keywords" content={seo?.seo?.keywords?.join(", ")} />
+
+        {seo?.seo?.schema?.map((item: any, idx: number) =>
+          item?.meta_value ? (
+            <script
+              key={idx}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: item.meta_value }}
+            />
+          ) : null
+        )}
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

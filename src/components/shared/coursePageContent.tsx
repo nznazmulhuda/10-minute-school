@@ -8,20 +8,11 @@ import Instructor from "@/components/home/instructor";
 import Pointer from "@/components/home/pointers";
 import Title from "@/components/home/title";
 import Trailer from "@/components/home/trailer";
-import HeadSeo from "@/components/shared/headSeo";
 import { Data } from "@/types/course";
 
 export default async function CoursePageContent({ data }: { data: Data }) {
   return (
     <>
-      <HeadSeo
-        title={data.seo.title}
-        description={data.seo.description}
-        keywords={data.seo.keywords}
-        defaultMeta={data.seo.defaultMeta}
-        schema={data.seo.schema}
-      />
-
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <section className="grid grid-cols-6 gap-4">
           {/* right side */}

@@ -26,7 +26,7 @@ export default function CtaButton({ data }: { data: Data }) {
 
           <Button
             size="lg"
-            className="w-full h-14 text-lg font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center"
+            className="w-full h-14 text-lg font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center text-white"
           >
             <Award />
             {data?.cta_text?.name || "Enroll Now"}
