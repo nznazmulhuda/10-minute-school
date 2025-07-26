@@ -16,8 +16,6 @@ export function YouTubePlayer({
 }: YouTubePlayerProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  console.log(thumbnail);
-
   if (!videoId) {
     return (
       <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">

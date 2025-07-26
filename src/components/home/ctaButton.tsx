@@ -1,13 +1,9 @@
-"use client";
-
 import { Award, Clock, BanknoteArrowDown } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { useData } from "@/provider/data.provider";
+import { Data } from "@/types/course";
 
-export default function CtaButton() {
-  const { data } = useData();
-
+export default function CtaButton({ data }: { data: Data }) {
   return (
     <Card className="overflow-hidden shadow-lg border border-emerald-200 bg-white py-0">
       <CardHeader className="bg-[#007a55] text-white py-2 pb-0">
@@ -30,7 +26,7 @@ export default function CtaButton() {
 
           <Button
             size="lg"
-            className="w-full h-14 text-lg font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center"
+            className="w-full h-14 text-lg font-bold bg-emerald-600 hover:bg-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer flex items-center justify-center text-white"
           >
             <Award />
             {data?.cta_text?.name || "Enroll Now"}

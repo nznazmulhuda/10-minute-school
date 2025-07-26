@@ -1,13 +1,9 @@
-"use client";
-
 import { Award, Star } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { Card, CardContent } from "../ui/card";
-import { useData } from "@/provider/data.provider";
+import { Data } from "@/types/course";
 
-export default function Title() {
-  const { data } = useData();
-
+export default function Title({ data }: { data: Data }) {
   return (
     <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white py-0 gap-0">
       <CardContent className="p-6">
@@ -31,7 +27,7 @@ export default function Title() {
           </h1>
 
           {data?.description && (
-            <p
+            <div
               className="text-lg text-gray-600"
               dangerouslySetInnerHTML={{
                 __html: data?.description,
