@@ -14,9 +14,9 @@ export default async function CoursePageContent({ data }: { data: Data }) {
   return (
     <>
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <section className="grid grid-cols-6 gap-4">
+        <section className="grid grid-cols-1 lg:grid-cols-6 gap-4">
           {/* right side */}
-          <aside className="col-span-4 space-y-6">
+          <aside className="col-span-1 lg:col-span-4 space-y-6">
             {/* title and description*/}
             <Title data={data} />
 
@@ -40,7 +40,7 @@ export default async function CoursePageContent({ data }: { data: Data }) {
           </aside>
 
           {/* left side */}
-          <aside className="col-span-2">
+          <aside className="col-span-1 lg:col-span-2">
             <div className="sticky top-22 space-y-6">
               {/* trailer */}
               <Trailer data={data} />

@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="bg-white/95 backdrop-blur-sm shadow-lg border-b border-slate-200 sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg border-b border-slate-200 lg:sticky top-0 z-50">
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <main className="flex items-center justify-between">
+        <main className="flex items-center justify-between flex-col lg:flex-row gap-4 lg:gap-0">
           <aside className="flex items-center gap-4">
             <Link href={"/"} className="flex items-center gap-4">
               <Image
@@ -23,7 +23,7 @@ export default function Header() {
             </Link>
           </aside>
 
-          <aside className="flex items-center gap-6">
+          <aside className="flex items-center flex-col lg:flex-row gap-2 lg:gap-6">
             <LanguageSwitcher />
 
             <div className="flex items-center gap-4">
