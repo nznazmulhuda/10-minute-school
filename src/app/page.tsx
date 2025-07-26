@@ -3,6 +3,7 @@ import CourseLeadOut from "@/components/home/courseLaidOut";
 import CtaButton from "@/components/home/ctaButton";
 import GuideLine from "@/components/home/guideLine";
 import Instructor from "@/components/home/instructor";
+import Pointer from "@/components/home/pointers";
 import Title from "@/components/home/title";
 import Trailer from "@/components/home/trailer";
 
@@ -25,7 +26,7 @@ export default function Home() {
           <GuideLine />
 
           {/* what you will learn by doing the course */}
-          <section></section>
+          <Pointer />
 
           {/* course exclusive feature */}
           <section></section>

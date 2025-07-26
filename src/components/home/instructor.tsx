@@ -24,12 +24,13 @@ export default function Instructor() {
 
   return (
     <Card className="overflow-hidden shadow-lg border border-slate-200 bg-white py-0 gap-0">
-      <CardHeader className="bg-slate-800 text-white py-2 pb-0">
-        <CardTitle className="flex items-center gap-3">
+      <CardHeader className="bg-[#1d293d] text-white relative overflow-hidden pt-2">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1d293d] to-[#1d2c3d] opacity-90"></div>
+        <CardTitle className="flex items-center gap-3 text-xl relative z-10">
           <div className="p-2 bg-white/20 rounded-lg backdrop-blur-sm">
-            <User className="w-5 h-5" />
+            <User className="w-6 h-6" />
           </div>
-          Course Instructors
+          {instructorData?.name || "Course instructor"}
         </CardTitle>
       </CardHeader>
 
