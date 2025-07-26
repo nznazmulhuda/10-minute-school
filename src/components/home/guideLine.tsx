@@ -8,8 +8,8 @@ export default function GuideLine() {
 
   return data?.sections
     .find((item) => item.type === "group_join_engagement")
-    ?.values?.map((engagement) => (
-      <Card className="overflow-hidden py-0">
+    ?.values?.map((engagement, idx) => (
+      <Card key={engagement.id || idx} className="overflow-hidden py-0">
         <div
           className="relative p-6 text-white"
           style={{

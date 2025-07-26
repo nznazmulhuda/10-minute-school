@@ -1,3 +1,4 @@
+import About from "@/components/home/about";
 import CheckList from "@/components/home/checkList";
 import CourseLeadOut from "@/components/home/courseLaidOut";
 import CtaButton from "@/components/home/ctaButton";
@@ -33,7 +34,7 @@ export default function Home() {
           <ExclusiveFeature />
 
           {/* course details */}
-          <section></section>
+          <About />
         </aside>
 
         {/* left side */}
