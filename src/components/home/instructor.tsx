@@ -57,9 +57,17 @@ export default function Instructor() {
                 </div>
                 <div className="flex-1 space-y-3">
                   <div>
-                    <h4 className="text-2xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
-                      {instructor.name}
-                    </h4>
+                    {instructor.has_instructor_page ? (
+                      <a href={instructor.slug} className="">
+                        <h4 className="text-2xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors hover:text-[#51a963] ease-in duration-200">
+                          {instructor.name}
+                        </h4>
+                      </a>
+                    ) : (
+                      <h4 className="text-2xl font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
+                        {instructor.name}
+                      </h4>
+                    )}
                     <Badge
                       variant="secondary"
                       className="mt-2 bg-slate-100 text-slate-700 border-slate-200"

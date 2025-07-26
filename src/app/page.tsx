@@ -10,11 +10,8 @@ export default function Home() {
       <section className="grid grid-cols-6 gap-4">
         {/* right side */}
         <aside className="col-span-4 space-y-6">
-          {/* title */}
+          {/* title and description*/}
           <Title />
-
-          {/* description */}
-          <section></section>
 
           {/* instructors */}
           <Instructor />
